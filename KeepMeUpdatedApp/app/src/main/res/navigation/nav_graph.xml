@@ -9,5 +9,18 @@
         android:id="@+id/mainFragment"
         android:name="com.app.keepmeupdated.ui.MainFragment"
         android:label="fragment_main"
-        tools:layout="@layout/fragment_main" />
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_historyItemFragment"
+            app:destination="@id/historyItemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/historyItemFragment"
+        android:name="com.app.keepmeupdated.ui.history.HistoryItemFragment"
+        android:label="fragment_history_item"
+        tools:layout="@layout/fragment_history_item" >
+        <action
+            android:id="@+id/action_historyItemFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
 </navigation>
